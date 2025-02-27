@@ -16,7 +16,7 @@ public class IndexController {
 		return "abc/inddex";
 	}
 	
-	//----------------------------------------------------------
+//-----------------------------------------------------------
 	@RequestMapping(value = "/helloWorld")
 	public String helloWorld() {
 		return "helloWorld";
@@ -49,5 +49,5 @@ public class IndexController {
 	public String loginUsrForm() {
 		return "usr/v1/tmpname/infra/member/loginForm";
 	}
-	//----------------------------------------------------------
+//----------------------------------------------------------
 }
