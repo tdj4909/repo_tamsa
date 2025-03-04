@@ -6,18 +6,29 @@
 	<resultMap id="resultMapObj"
 		type="com.a2a2lab.fapp.company.CompanyDto"></resultMap>
 
-		<select id="selectList" resultMap="resultMapObj">
-			SELECT
-				seq,
-				main,
-				company,
-				team,
-				position,
-				contact_seq
-			FROM
-				company
-			WHERE 1=1
-			ORDER BY seq DESC
-		</select>
-	
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+		seq,
+		main,
+		company,
+		team,
+		position,
+		contact_seq
+		FROM
+		company
+		WHERE 1=1
+		ORDER BY seq DESC
+	</select>
+
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+			company
+		FROM
+			company
+		WHERE 1=1
+			AND seq=1
+		ORDER BY seq DESC
+	</select>
+
 </mapper>

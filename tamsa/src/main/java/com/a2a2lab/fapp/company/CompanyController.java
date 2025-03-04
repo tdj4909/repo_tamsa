@@ -31,4 +31,10 @@ public class CompanyController {
 		return "company/companyXdmList";
 	}
 	
+	@RequestMapping(value = "/company/companyXdmView")
+	public String codeGroupXdmView(Model model) {
+		model.addAttribute("item", companyService.selectOne());
+		return "company/companyXdmView";
+	}
+	
 }

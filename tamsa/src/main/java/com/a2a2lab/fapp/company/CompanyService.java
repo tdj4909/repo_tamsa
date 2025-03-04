@@ -28,4 +28,8 @@ public class CompanyService {
 	public List<CompanyDto> selectList() {
 		return companyDao.selectList();
 	}
+	
+	public CompanyDto selectOne() {
+		return companyDao.selectOne();
+	}
 }
