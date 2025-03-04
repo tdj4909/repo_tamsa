@@ -11,7 +11,7 @@
   </tr>
   <tr>
   	<td th:text="${item.seq}"></td>
-  	<td th:text="${item.company}"></td>
+  	<td><a th:href="@{/company/companyXdmList}" th:text="${item.company}"></a></td>
   </tr>
 </table>
 

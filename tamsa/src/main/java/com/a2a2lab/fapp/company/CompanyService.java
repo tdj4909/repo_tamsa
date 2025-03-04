@@ -29,7 +29,7 @@ public class CompanyService {
 		return companyDao.selectList();
 	}
 	
-	public CompanyDto selectOne() {
-		return companyDao.selectOne();
+	public CompanyDto selectOne(CompanyDto companyDto) {
+		return companyDao.selectOne(companyDto);
 	}
 }

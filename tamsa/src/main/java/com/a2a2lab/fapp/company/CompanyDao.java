@@ -11,5 +11,5 @@ public interface CompanyDao {
 	// 쿼리 결과를 가져옴
 	
 	public List<CompanyDto> selectList();
-	public CompanyDto selectOne();
+	public CompanyDto selectOne(CompanyDto companyDto);
 }

@@ -32,8 +32,11 @@ public class CompanyController {
 	}
 	
 	@RequestMapping(value = "/company/companyXdmView")
-	public String codeGroupXdmView(Model model) {
-		model.addAttribute("item", companyService.selectOne());
+	public String codeGroupXdmView(Model model, CompanyDto companyDto) {
+		
+		System.out.println("companyDto.getSeq(): " + companyDto.getSeq());
+
+		model.addAttribute("item", companyService.selectOne(companyDto));
 		return "company/companyXdmView";
 	}
 	
