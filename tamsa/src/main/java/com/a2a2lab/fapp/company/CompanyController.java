@@ -26,18 +26,36 @@ public class CompanyController {
 //	}
 	
 	@RequestMapping(value = "/company/companyXdmList")
-	public String codeGroupXdmList(Model model) {
+	public String companyXdmList(Model model) {
 		model.addAttribute("list", companyService.selectList());
 		return "company/companyXdmList";
 	}
 	
 	@RequestMapping(value = "/company/companyXdmView")
-	public String codeGroupXdmView(Model model, CompanyDto companyDto) {
+	public String companyXdmView(Model model, CompanyDto companyDto) {
 		
 		System.out.println("companyDto.getSeq(): " + companyDto.getSeq());
 
 		model.addAttribute("item", companyService.selectOne(companyDto));
 		return "company/companyXdmView";
+	}
+	
+	@RequestMapping(value = "/company/companyXdmForm")
+	public String companyXdmForm() {
+		
+		return "company/companyXdmForm";
+	}
+	
+	@RequestMapping(value = "/company/companyXdmInst")
+	public String companyXdmInst(CompanyDto companyDto) {
+		System.out.println("companyDto.getSeq(): " + companyDto.getSeq());
+		System.out.println("companyDto.getCompany(): " + companyDto.getCompany());
+		
+		companyService.insert(companyDto);
+		
+		System.out.println("companyDto.getSeq(): " + companyDto.getSeq());
+		
+		return "redirect:/company/companyXdmList";
 	}
 	
 }

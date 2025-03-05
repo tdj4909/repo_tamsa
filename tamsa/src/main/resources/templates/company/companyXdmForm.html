@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/company/companyXdmInst" method="post" id="form">
+	main: <input type="text" name="main" maxlength="10"/>
+	company: <input type="text" name="company" id="company" placeholder="회사명 입력"/>
+	team: <input type="text" name="team" placeholder="부서명 입력"/>
+	position: <input type="text" name="position" maxlength="10"/>
+	contact_seq: <input type="text" name="contact_seq" maxlength="10"/>
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick = function(){
+		document.getElementById("form").submit();
+	}
+	
+//	document.getElementById("company").onclick = function(){
+//		alert("company");		
+//	}
+	
+</script>
+</body>
+</html>

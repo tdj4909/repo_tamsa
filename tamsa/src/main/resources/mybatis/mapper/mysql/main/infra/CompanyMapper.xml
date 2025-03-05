@@ -22,13 +22,32 @@
 
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
-			seq,
-			company
+		seq,
+		company
 		FROM
-			company
+		company
 		WHERE 1=1
-			AND seq= #{seq}
+		AND seq= #{seq}
 		ORDER BY seq DESC
 	</select>
+
+	<insert id="insert">
+		INSERT INTO company (
+		main,
+		company,
+		team,
+		position,
+		contact_seq
+		) VALUES (
+		#{main},
+		#{company},
+		#{team},
+		#{position},
+		#{contact_seq}
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 
 </mapper>
