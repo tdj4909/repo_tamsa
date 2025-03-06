@@ -36,4 +36,8 @@ public class CompanyService {
 	public int insert(CompanyDto companyDto) {
 		return companyDao.insert(companyDto);
 	}
+	
+	public int update(CompanyDto companyDto) {
+		return companyDao.update(companyDto);
+	}
 }

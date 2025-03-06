@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/company/companyXdmUpdt" method="post" id="form">
+	<input type="hidden" name="seq" th:value="${item?.seq}">
+	seq: <input type="text" name="seq1" maxlength="10" disabled th:value="${item?.seq}"/>
+	main: <input type="text" name="main" maxlength="10" th:value="${item?.main}"/>
+	company: <input type="text" name="company" id="company"  th:value="${item?.company}" placeholder="회사명 입력"/>
+	team: <input type="text" name="team" th:value="${item?.team}" placeholder="부서명 입력"/>
+	position: <input type="text" name="position" maxlength="10" th:value="${item?.position}" />
+	contact_seq: <input type="text" name="contact_seq" maxlength="10" th:value="${item?.contact_seq}" />
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick = function(){
+		document.getElementById("form").submit();
+	}
+	
+//	document.getElementById("company").onclick = function(){
+//		alert("company");		
+//	}
+	
+</script>
+</body>
+</html>

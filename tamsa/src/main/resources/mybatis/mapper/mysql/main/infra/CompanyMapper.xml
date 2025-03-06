@@ -23,7 +23,11 @@
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
 		seq,
-		company
+		main,
+		company,
+		team,
+		position,
+		contact_seq
 		FROM
 		company
 		WHERE 1=1
@@ -49,5 +53,16 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
+	
+	<update id="update">
+		UPDATE company SET
+			main = #{main},
+			company = #{company},
+			team = #{team},
+			position = #{position},
+			contact_seq = #{contact_seq}
+		WHERE
+			seq = #{seq}
+	</update>
 
 </mapper>
