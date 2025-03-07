@@ -10,6 +10,13 @@ public class CompanyDto {
 	private String company;
 	private String team;
 	private String position;
+	private Integer delNy;
+	public Integer getDelNy() {
+		return delNy;
+	}
+	public void setDelNy(Integer delNy) {
+		this.delNy = delNy;
+	}
 	private String contact_seq;
 //	-----
 	public String getSeq() {

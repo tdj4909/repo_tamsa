@@ -14,4 +14,6 @@ public interface CompanyDao {
 	public CompanyDto selectOne(CompanyDto companyDto);
 	public int insert(CompanyDto companyDto);
 	public int update(CompanyDto companyDto);
+	public int delete(CompanyDto companyDto);
+	public int uelete(CompanyDto companyDto);
 }

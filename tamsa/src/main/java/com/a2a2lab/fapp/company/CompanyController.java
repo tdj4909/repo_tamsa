@@ -1,8 +1,5 @@
 package com.a2a2lab.fapp.company;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -77,7 +74,13 @@ public class CompanyController {
 	
 	@RequestMapping(value = "/company/companyXdmDele")
 	public String companyXdmDele(CompanyDto companyDto) {
-
+		companyService.delete(companyDto);
+		return "redirect:/company/companyXdmList";
+	}
+	
+	@RequestMapping(value = "/company/companyXdmUele")
+	public String companyXdmUele(CompanyDto companyDto) {
+		companyService.uelete(companyDto);
 		return "redirect:/company/companyXdmList";
 	}
 	

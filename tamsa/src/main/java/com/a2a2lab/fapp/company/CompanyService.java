@@ -40,4 +40,12 @@ public class CompanyService {
 	public int update(CompanyDto companyDto) {
 		return companyDao.update(companyDto);
 	}
+	
+	public int delete(CompanyDto companyDto) {
+		return companyDao.delete(companyDto);
+	}
+	
+	public int uelete(CompanyDto companyDto) {
+		return companyDao.uelete(companyDto);
+	}
 }
