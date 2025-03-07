@@ -75,4 +75,10 @@ public class CompanyController {
 		return "redirect:/company/companyXdmList";
 	}
 	
+	@RequestMapping(value = "/company/companyXdmDele")
+	public String companyXdmDele(CompanyDto companyDto) {
+
+		return "redirect:/company/companyXdmList";
+	}
+	
 }
